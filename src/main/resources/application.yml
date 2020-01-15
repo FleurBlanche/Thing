@@ -1,0 +1,44 @@
+server:
+  port: 8080
+
+thing:
+  interfaceVersion: v1.0
+  encodingStandard: utf-8
+  basicInfo:
+    deviceName: microCamera
+    deviceType: camera
+    deviceId: 1
+    deviceAddress: localhost
+    deviceVersion: v1.0
+  propertyInfo:
+    deviceProducer: 宁波舜宇
+    deviceUsername: 李旭辉
+    deviceColor: 蓝白色
+    deviceWeight: 5KG
+  serviceInfos:
+    - serviceName: 检查连接情况
+      dataType: 字符串
+      serviceAddress: /hello
+      protocolType: HTTP GET
+      protocolParameter: "null"
+      remark: service1
+    - serviceName: 获取配置文件
+      dataType: 数据块
+      serviceAddress: /config
+      protocolType: HTTP GET
+      protocolParameter: null
+      remark: service2
+    - serviceName: 获取视频流
+      dataType: 视频流
+      serviceAddress: rtsp://localhost/1
+      protocolType: RTSP
+      protocolParameter: null
+      remark: service3
+  extendInfos:
+    - contactMethod: QQ
+      contactAddress: 1007759354
+    - contactMethod: PHONE
+      contactAddress: 15821195383
+
+
+

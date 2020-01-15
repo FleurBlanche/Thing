@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "thing.basicInfo.deviceName",
+      "type": "java.lang.String",
+      "description": "Description for thing.basicInfo.deviceName."
+  }
+] }
