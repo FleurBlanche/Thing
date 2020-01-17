@@ -21,25 +21,24 @@ public class WebsocketEndpoint {
     @OnOpen
     public void onOpen(Session session, @PathParam("id") String id) {
         if (sessionMap.containsKey(id)){
-            String warning = String.format("Connection of %s has been established", id);
+            String warning = String.format("Server Connection of %s has been established", id);
             logger.info(warning);
             session.getAsyncRemote().sendText(warning);
         }
-        logger.info(String.format("Connection of %s is established", id));
+        logger.info(String.format("Server Connection of %s is established", id));
         SessionEntity se = new SessionEntity(session, id);
         sessionMap.put(id, se);
     }
 
     @OnClose
     public void onClose(Session session, @PathParam("id") String id) {
-        logger.info(String.format("Connection of %s is closed", id));
+        logger.info(String.format("Server Connection of %s is closed", id));
         sessionMap.remove(id);
     }
 
     @OnMessage
     public void onMessage(String message, Session session, @PathParam("id") String id) {
-        //TODO
-        logger.info(String.format("Get Message From %s: " + message), id);
+        logger.info(String.format("Server Get Message From %s: " + message, id));
     }
 
     @OnError

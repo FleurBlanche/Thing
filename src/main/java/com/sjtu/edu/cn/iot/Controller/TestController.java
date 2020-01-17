@@ -3,8 +3,10 @@ package com.sjtu.edu.cn.iot.Controller;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.sjtu.edu.cn.iot.Config.WebclientConfig;
 import com.sjtu.edu.cn.iot.Entity.Thing;
 import lombok.extern.slf4j.Slf4j;
+import org.java_websocket.client.WebSocketClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,10 +31,13 @@ public class TestController {
     @Autowired
     Thing thing;
 
+    @Autowired
+    WebSocketClient webSocketClient;
+
     @GetMapping("/hello")
     @ResponseBody
     public String hello(){
-        return "Hello World!";
+        return "Hello, I'm online.";
     }
 
     @GetMapping("/table")

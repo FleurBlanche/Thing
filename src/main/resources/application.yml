@@ -5,10 +5,10 @@ thing:
   interfaceVersion: v1.0
   encodingStandard: utf-8
   basicInfo:
-    deviceName: microCamera
-    deviceType: camera
+    deviceName: 李旭辉的显微镜
+    deviceType: 显微镜
     deviceId: 1
-    deviceAddress: localhost
+    deviceAddress: 192.168.1.107
     deviceVersion: v1.0
   propertyInfo:
     deviceProducer: 宁波舜宇
@@ -30,7 +30,7 @@ thing:
       remark: service2
     - serviceName: 获取视频流
       dataType: 视频流
-      serviceAddress: rtsp://localhost/1
+      serviceAddress: rtsp://192.168.1.107/1
       protocolType: RTSP
       protocolParameter: null
       remark: service3
