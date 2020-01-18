@@ -14,9 +14,13 @@ public class Item {
     @JSONField(name = "物类型")
     private String deviceType;
 
-    public Item(String name, String tableAddress, String type){
+    @JSONField(name = "所有人")
+    private String owner;
+
+    public Item(String name, String tableAddress, String type, String user){
         this.name = name;
         this.tableAddress = tableAddress;
         this.deviceType = type;
+        this.owner = user;
     }
 }

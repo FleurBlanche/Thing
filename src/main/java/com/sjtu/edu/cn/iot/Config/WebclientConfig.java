@@ -48,7 +48,7 @@ public class WebclientConfig {
                 @Override
                 public void onOpen(ServerHandshake handshakedata) {
                     log.info("[client websocket] 连接成功");
-                    Item item = new Item(thing.getBasicInfo().getDeviceName(), (publicIpAddress + Constants.tableUrl), thing.getBasicInfo().getDeviceType());
+                    Item item = new Item(thing.getBasicInfo().getDeviceName(), (publicIpAddress + Constants.tableUrl), thing.getBasicInfo().getDeviceType(), thing.getPropertyInfo().getDeviceUsername());
                     send(JSON.toJSONString(item));
                 }
 
