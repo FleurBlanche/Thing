@@ -8,7 +8,7 @@ thing:
     deviceName: 李旭辉的显微镜
     deviceType: 显微镜
     deviceId: 1
-    deviceAddress: 192.168.1.107
+    deviceAddress: 192.168.1.101
     deviceVersion: v1.0
   propertyInfo:
     deviceProducer: 宁波舜宇
@@ -30,7 +30,7 @@ thing:
       remark: service2
     - serviceName: 获取视频流
       dataType: 视频流
-      serviceAddress: rtsp://192.168.1.107/1
+      serviceAddress: rtsp://192.168.1.101/1
       protocolType: RTSP
       protocolParameter: null
       remark: service3
